@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 56px;
+    background-color: black;
+    z-index: 100;
+}
+header .top {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+}
+header .top .logo {
+    display: flex;
+    margin-top: -8px;
+    height: 100%;
+    padding: 0px 50px;
+}
+header .logo img {
+    width: 120px;
+    height: 50px;
+}
+header .top  .login {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding-right: 50px;
+}
+header .top  .login p {
+    font-size: .8em;
+}
+header .top  .login a {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: .9em;
+    font-weight: 400;
+    color: #fff;
+    outline: none;
+    background-color: #f40612;
+    padding: 7px 18px;
+    margin: 0px 5px;
+    border-radius: 5px;
+}
+header .top  .login .red:hover {
+    background-color: #d31922;
+}
+header .top  .login .black {
+    background-color: black;
+    border: 1px solid #888;
+}
+header .top  .login .black:hover {
+    background-color: rgb(32, 30, 30);
+}
+
+main {
+    position: relative;
+    width: 100%;
+    height: 510vh;     /* 수정*/
+    background-color: #181818;
+}
+main .ft {
+    padding: 100px 0px 50px 50px;
+    line-height: 22px;
+    color: #fff;
+}
+main .ft h1 {
+    padding: 20px 0px;
+    font-size: 3rem;
+}
+main .ft p {
+    padding-top: 10px;
+    font-size: 1.2em;
+    line-height: 25px;
+}
+
+main .slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding: 0px 50px 50px 60px;
+}
+main .slider h3 {
+    color: #fff;
+    font-weight: 300;
+    font-size: 1.3rem;
+    padding: 15px 0px;
+}
+main .slider .imgbox-items {
+    display: flex;
+}
+main .slider .imgbox-items .slide {
+    display: flex;
+    transition: .3s linear;
+}
+main .slider .imgbox-items .imgbox {
+    padding: 0px 5px;
+}
+main .slider .imgbox-items .imgbox span {
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    padding-top: 5px;
+}
+main .slider .imgbox-items .blur-left {
+    position: absolute;
+    top: 0;
+    left: -0px;
+    width: 80px;
+    height: 300px;
+    filter: blur(15px);
+    background-color: #181818; 
+    z-index: 1;
+}
+main .slider .imgbox-items .blur-right {
+    position: absolute;
+    top: 0;
+    right: -40px;
+    width: 120px;
+    height: 300px;
+    filter: blur(15px);
+    background-color: #181818; 
+    z-index: 1;
+}
+
+main .pre-btn, main .next-btn {
+    color: red;
+    font-size: 1.3rem;
+    cursor: pointer;
+    z-index: 2;
+}
+main .pre-btn {
+    position: absolute;
+    top: 55%;
+    left: 1%;
+    transform: translateY(-50%);
+}
+main .next-btn {
+    position: absolute;
+    top: 55%;
+    right: 1%; 
+}
